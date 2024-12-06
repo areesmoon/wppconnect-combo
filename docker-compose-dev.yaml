@@ -1,0 +1,14 @@
+services:
+    wppconnect-combo-debug:
+        image: areesmoon/wppconnect-server
+        container_name: wppconnect-combo-debug
+        restart: always
+        env_file: my.env
+        ports:
+            - 21465:21465
+            - 880:80
+            - 220:22
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        volumes:
+            - ./html:/var/www/localhost/htdocs

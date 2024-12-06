@@ -1,0 +1,10 @@
+services:
+    wppconnect-combo-debug:
+        image: areesmoon/wppconnect-combo
+        container_name: wppconnect-combo-debug
+        restart: always
+        env_file: my.env
+        ports:
+            - 21465:21465
+            - 880:80
+            - 220:22
